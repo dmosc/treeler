@@ -8,6 +8,7 @@ import MAP from "../img/map.jpg"
 import HomeScreen from './web'
 import GoogleMapReact from 'google-map-react'
 import logo from '../img/2.png'
+import MobileHomeScreen from './mobileHomeScreen'
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -15,7 +16,7 @@ const routes = [
     {
         path: '/mobile/home',
         exact: true,
-        main: HomeScreen,
+        main: MobileHomeScreen,
     },
     {
         path: '/mobile/registerTrees',
@@ -77,7 +78,6 @@ class Mobile extends Component {
     render() {
         return (
             <div>
-                <img src={logo} className='logohomeScreen' alt="logo" />
                 <Router>
                     <Sidebar
                         sidebar={<div>
@@ -134,26 +134,14 @@ class Mobile extends Component {
                             },
                         }}>
                     </Sidebar>
+                    <img src={logo} className='logohomeScreen' alt="logo" />
                     <button className='removeButton' onClick={() => this.onSetSidebarOpen(true)}>
                         <img src={IMG} className='profileImg' alt="logo" />
                     </button>
                     <div className="rectangle1">
                     </div>
-                    <div className='map'>
-                        <GoogleMapReact defaultCenter={{ lat: 0, lng: 0 }} defaultZoom={11}>
-                        </GoogleMapReact>
-                    </div>
-                    <div className="rectangle2">
-                    </div>
-                    <div className='welcomeBack'>
-                        Welcome Back Jorge Abdo!
-                    </div>
-                    <div className='treelers'>
-                        Treelers
-                        </div>
-                    <div className='treelersNum'>
-                        290
-                        </div>
+                    <img src={logo} className='logohomeScreen' alt="logo" />
+                    <Redirect from="/" exact to="/mobile/home" />
                     {routes.map((route) => (
                         <Route
                             key={route.path}
