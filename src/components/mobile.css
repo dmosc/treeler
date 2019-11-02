@@ -1,0 +1,86 @@
+.profileImg{
+    position: absolute;
+    width: 15%;
+    border-radius: 50px;;
+}
+.removeButton{
+    border:none;
+    background-color: white;
+}
+.profileIMGSideBar{
+    position: relative;
+    border-radius: 50px;
+    height:10%;
+    width: 20%;
+    left:5%;
+}
+.sideBarName{
+    position: absolute;
+    top:22%;
+    font-weight: bold;
+    left:5%;
+    font-size: calc(1vw + 1vh + .5vmin);
+    font-family         : "Helvetica", Helvetica, Arial, serif;
+}
+.rectangle1 {
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 11%;
+    height              : 1px;
+    box-sizing          : border-box;
+    width               : 100%;
+    position            : absolute;
+    margin              : 0;
+    border-style        : solid;
+    border-width        : 1px;
+    border-color        : rgba(200, 199, 204, 1.0);
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+  }
+  .map{
+      position: relative;;
+      top:9vh;
+      height:60vh;
+      left:-1%;
+  }
+  .rectangle2 {
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 72%;
+    height              : 1px;
+    box-sizing          : border-box;
+    width               : 100%;
+    position            : absolute;
+    margin              : 0;
+    border-style        : solid;
+    border-width        : 1px;
+    border-color        : rgba(200, 199, 204, 1.0);
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+  }
+  .treelers{
+      position: absolute;
+      top:80%;
+      font-size:calc(1.2vw + 1.2vh + .6vmin);
+      left:5%;
+  }
+  .welcomeBack{
+    position: absolute;
+    top:75%;
+    left:18%;
+    font-size:calc(1.5vw + 1.5vh + .75vmin);
+  }
+  .treelersNum{
+    position: absolute;
+    top:83%;
+    left:7%;
+    font-size:calc(1.2vw + 1.2vh + .6vmin);
+    text-align: center;
+  }
+  .logohomeScreen{
+      position: absolute;
+      height:28%;
+      width:80%;
+      top:-8%;
+      left:13%;
+  }
