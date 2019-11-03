@@ -1,22 +1,23 @@
 /* global google */
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-import Sidebar from "react-sidebar";
-import "./mobile.css";
-import IMG from "../img/daniel.jpg";
-import Popup from "reactjs-popup";
-import GoogleMapReact from "google-map-react";
-import { Button, Input, Upload, Icon, DatePicker, Typography } from "antd";
-import logo from "../img/2.png";
+import React, {Component} from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  NavLink
+} from 'react-router-dom';
+import Sidebar from 'react-sidebar';
+import Popup from 'reactjs-popup';
+import GoogleMapReact from 'google-map-react';
+import {Button, Input, Upload, Icon, DatePicker, Typography} from 'antd';
 
-const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
+const {MonthPicker, RangePicker, WeekPicker} = DatePicker;
 function onChange(date, dateString) {
   console.log(date, dateString);
 }
 
-const Marker = ({ text }) => <div>{text}</div>;
-const { Text } = Typography;
+const Marker = ({text}) => <div>{text}</div>;
+const {Text} = Typography;
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -25,7 +26,7 @@ const routes = [
     {
         path: '/mobile/home',
         exact: true,
-        main: MobileHomeScreen,
+        main: Home,
     },
     
     {
@@ -56,7 +57,7 @@ const routes = [
 */
 ];
 
-class MobileHomeScreen extends Component {
+class Home extends Component {
   static defaultProps = {
     center: {
       lat: 30.26,
@@ -71,22 +72,22 @@ class MobileHomeScreen extends Component {
       map: null,
       heatmapVisible: true,
       sidebarDocked: mql.matches,
-      img: "",
-      place: "",
-      type: "",
-      date: "",
+      img: '',
+      place: '',
+      type: '',
+      date: '',
       heatmapVisible: true,
       heatmapPoints: [
-        { lat: 30.16, lng: -97.71 },
-        { lat: 30.26, lng: -97.79 },
-        { lat: 30.36, lng: -97.7 },
-        { lat: 30.46, lng: -97.79 },
-        { lat: 30.56, lng: -97.7 },
-        { lat: 30.266, lng: -97.79 },
-        { lat: 30.276, lng: -97.7 },
-        { lat: 30.29, lng: -97.79 },
-        { lat: 30.76, lng: -97.7 },
-        { lat: 30.46, lng: -97.79 }
+        {lat: 30.16, lng: -97.71},
+        {lat: 30.26, lng: -97.79},
+        {lat: 30.36, lng: -97.7},
+        {lat: 30.46, lng: -97.79},
+        {lat: 30.56, lng: -97.7},
+        {lat: 30.266, lng: -97.79},
+        {lat: 30.276, lng: -97.7},
+        {lat: 30.29, lng: -97.79},
+        {lat: 30.76, lng: -97.7},
+        {lat: 30.46, lng: -97.79}
       ]
     };
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
@@ -94,13 +95,13 @@ class MobileHomeScreen extends Component {
     this.onSetSidebarOpen = this.onSetSidebarOpen.bind(this);
     this.handleMapReady = this.handleMapReady.bind(this);
   }
-  onMapClick({ x, y, lat, lng, event }) {
+  onMapClick({x, y, lat, lng, event}) {
     if (!this.state.heatmapVisible) {
       return;
     }
 
     this.setState({
-      heatmapPoints: [...this.state.heatmapPoints, { lat, lng }]
+      heatmapPoints: [...this.state.heatmapPoints, {lat, lng}]
     });
     if (this._googleMap !== undefined) {
       const point = new google.maps.LatLng(lat, lng);
@@ -122,10 +123,10 @@ class MobileHomeScreen extends Component {
     );
   }
   onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
+    this.setState({sidebarOpen: open});
   }
   handleMapReady(mapProps, map) {
-    this.setState({ map: map });
+    this.setState({map: map});
   }
 
   componentWillMount() {
@@ -137,18 +138,18 @@ class MobileHomeScreen extends Component {
   }
 
   onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
+    this.setState({sidebarOpen: open});
   }
 
   mediaQueryChanged() {
-    this.setState({ sidebarDocked: mql.matches, sidebarOpen: false });
+    this.setState({sidebarDocked: mql.matches, sidebarOpen: false});
   }
   handleChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
+    this.setState({[e.target.name]: e.target.value});
   };
 
   render() {
-    const apiKey = { key: "AIzaSyDwPTu_XBkCoq7x_tip5nRTCPZSlGh8HsM" };
+    const apiKey = {key: 'AIzaSyDwPTu_XBkCoq7x_tip5nRTCPZSlGh8HsM'};
     const heatMapData = {
       positions: this.state.heatmapPoints,
       options: {
@@ -174,7 +175,11 @@ class MobileHomeScreen extends Component {
           <Sidebar
             sidebar={
               <div>
-                <img src={IMG} className="profileIMGSideBar" alt="logo" />
+                <img
+                  src="/static/daniel.jpg"
+                  className="profileIMGSideBar"
+                  alt="logo"
+                />
                 <div className="sideBarName">Jorge Abdo</div>
                 <div className="sideBarTreeles">290 treelers</div>
                 <div className="rectangle10"></div>
@@ -203,28 +208,27 @@ class MobileHomeScreen extends Component {
             onSetOpen={this.onSetSidebarOpen}
             styles={{
               sidebar: {
-                background: "#096dd9",
+                background: '#096dd9',
                 width: 300
               },
               root: {
-                position: "absolute",
+                position: 'absolute',
                 top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0,
-                overflow: "hidden"
+                overflow: 'hidden'
               }
             }}
           ></Sidebar>
 
           <img
+            src="/static/daniel.jpg"
             onClick={() => this.onSetSidebarOpen(true)}
-            src={IMG}
             className="profileImg"
             alt="logo"
           />
 
-          <Redirect from="/" exact to="/mobile/home" />
           <Popup
             trigger={
               <div className="registerTreeButton">
@@ -236,26 +240,20 @@ class MobileHomeScreen extends Component {
             {close => (
               <div className="modal">
                 <div className="actividadespublicadascopy78">
-                  <form style={{ padding: "40px" }}>
+                  <form style={{padding: '40px'}}>
                     <div className="registerTree">Register Tree</div>
                     <div className="rectangle89" />
                     <Upload>
-                      <Button style={{ margin: "20px 20px 20px 0" }}>
+                      <Button style={{margin: '20px 20px 20px 0'}}>
                         <Icon type="upload" /> Click to Upload
                       </Button>
                     </Upload>
-                    <Input
-                      style={{ marginBottom: "20px" }}
-                      placeholder="Place"
-                    />
-                    <Input
-                      style={{ marginBottom: "20px" }}
-                      placeholder="Type"
-                    />
+                    <Input style={{marginBottom: '20px'}} placeholder="Place" />
+                    <Input style={{marginBottom: '20px'}} placeholder="Type" />
 
                     <DatePicker onChange={onChange} />
 
-                    <Button style={{ margin: "20px 20px 20px 0" }}>
+                    <Button style={{margin: '20px 20px 20px 0'}}>
                       <Icon type="check" /> Done
                     </Button>
                   </form>
@@ -287,4 +285,4 @@ class MobileHomeScreen extends Component {
   }
 }
 
-export default MobileHomeScreen;
+export default Home;

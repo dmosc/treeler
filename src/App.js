@@ -1,9 +1,8 @@
-import React from "react";
-import { isMobile } from "react-device-detect";
-import Mobile from "./components/mobile";
-import Web from "./components/web";
-import "antd/dist/antd.css";
-import "./App.css";
+import React from 'react';
+import {isMobile} from 'react-device-detect';
+import Mobile from './mobile/index';
+import Web from './web/index';
+import 'antd/dist/antd.css';
 
 function App() {
   if (isMobile) {

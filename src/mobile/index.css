@@ -32,7 +32,7 @@
   font-weight: bold;
   left: 33%;
   font-size: calc(1.3vw + 1.3vh + 0.65vmin);
-  font-family: "Verdana";
+  font-family: 'Verdana';
 }
 .sideBarTreeles {
   position: absolute;
@@ -40,7 +40,7 @@
   font-weight: bold;
   left: 41%;
   font-size: calc(1vw + 1vh + 0.5vmin);
-  font-family: "Helvetica", Helvetica, Arial, serif;
+  font-family: 'Helvetica', Helvetica, Arial, serif;
 }
 .rectangle1 {
   background-color: rgba(255, 255, 255, 0);
@@ -163,7 +163,7 @@
 .sideBarRegisterTree {
   top: 15%;
   height: 5%;
-  font-family: "Verdana";
+  font-family: 'Verdana';
   font-size: calc(1.2vw + 1.2vh + 0.6vmin);
   color: white;
   border-radius: 15px;
@@ -179,7 +179,7 @@
   border-radius: 15px;
   width: 80%;
   position: absolute;
-  font-family: "Verdana";
+  font-family: 'Verdana';
   color: white;
   margin: 0;
   left: 10%;
@@ -191,7 +191,7 @@
   border-radius: 15px;
   width: 80%;
   position: absolute;
-  font-family: "Verdana";
+  font-family: 'Verdana';
   color: white;
   margin: 0;
   left: 10%;
@@ -203,7 +203,7 @@
   border-radius: 15px;
   width: 80%;
   position: absolute;
-  font-family: "Verdana";
+  font-family: 'Verdana';
   color: white;
   margin: 0;
   left: 10%;
@@ -215,7 +215,7 @@
   border-radius: 15px;
   width: 80%;
   position: absolute;
-  font-family: "Verdana";
+  font-family: 'Verdana';
   color: white;
   margin: 0;
   left: 10%;
