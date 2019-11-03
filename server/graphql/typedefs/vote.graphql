@@ -1,0 +1,16 @@
+type Vote {
+  post: Post!
+  user: User!
+  type: VoteType!
+}
+
+enum VoteType {
+  UPVOTE
+  DOWNVOTE
+}
+
+input VoteInput {
+  post: ID!
+  user: ID!
+  type: VoteType!
+}

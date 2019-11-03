@@ -1,0 +1,9 @@
+type Soil {
+  name: String!
+  trees: [Tree!]
+}
+
+input SoilInput {
+  name: String!
+  tree: ID!
+}

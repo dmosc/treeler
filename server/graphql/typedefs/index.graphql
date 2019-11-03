@@ -1,0 +1,38 @@
+# import * from "user.graphql"
+# import * from "origin.graphql"
+# import * from "post.graphql"
+# import * from "vote.graphql"
+# import * from "tree.graphql"
+# import * from "soil.graphql"
+
+type Query {
+  # User
+  user(id: ID!): User
+  # Origin
+  origin(id: ID!): Origin
+  # Post
+  post(id: ID!): Post
+  # posts(userId: ID!): [Post]
+  # posts(first: Int): [Post]
+  # Vote
+  votes(userId: ID!): [Vote]
+  # Soil
+  soil(id: ID!): Soil
+  # Tree
+  tree(id: ID!): Tree
+}
+
+type Mutation {
+  # User
+  user(user: UserInput!): User
+  #Origin
+  origin(origin: OriginInput!): Origin
+  # Post
+  post(post: PostInput!): Post
+  # Vote
+  vote(vote: VoteInput!): Vote
+  # Soil
+  soil(soil: SoilInput!): Soil
+  # Tree
+  tree(tree: TreeInput!): Tree
+}

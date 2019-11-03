@@ -1,0 +1,15 @@
+type Post {
+  image: String!
+  user: User!
+  origin: Origin!
+  tree: Tree!
+  upvotes: [Vote!]
+  downvotes: [Vote!]
+}
+
+input PostInput {
+  image: String!
+  user: ID!
+  origin: ID!
+  tree: ID!
+}
