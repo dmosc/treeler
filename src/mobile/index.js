@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
-import { Home } from "./views/index";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Home, CameraView } from "./views/index";
+import "antd/dist/antd.css";
 import "./index.css";
+import { NavLink } from "react-router-dom";
 import Sidebar from "react-sidebar";
 import NewsFeed from "./views/Feed";
 import MyTrees from "./views/MyTrees";
@@ -99,8 +101,9 @@ class Mobile extends Component {
           />
           <Route exact path="/" component={Home} />
           <Route exact path="/mobile/newsFeed" component={NewsFeed} />
-          <Route exact path="/mobile/events" component={Events} />
-          <Route exact path="/mobile/myTrees" component={MyTrees} />
+          <Route exact path="/events" component={Home} />
+          <Route exact path="/trees" component={Home} />
+          <Route exact path="/camera" component={CameraView} />
           <Route exact path="/profile" component={Home} />
           <Route exact path="/papa" component={Home} />
         </Router>

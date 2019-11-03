@@ -118,7 +118,57 @@ class Home extends Component {
                   <Input style={{ marginBottom: "20px" }} placeholder="Place" />
                   <Input style={{ marginBottom: "20px" }} placeholder="Type" />
 
+<<<<<<< HEAD
+        <Router>
+          <Sidebar
+            sidebar={
+              <div>
+                <img
+                  src="/static/daniel.jpg"
+                  className="profileIMGSideBar"
+                  alt="logo"
+                />
+                <div className="sideBarName">Jorge Abdo</div>
+                <div className="sideBarTreeles">290 treelers</div>
+                <div className="rectangle10"></div>
+
+                <NavLink to="/camera" className="sideBarRegisterTree">
+                  <div>Register Tree</div>
+                </NavLink>
+                <NavLink to="/mobile/myTrees" className="sideBarMyTrees">
+                  <div>My Trees</div>
+                </NavLink>
+                <NavLink to="/mobile/newsFeed" className="sideBarNewsFeed">
+                  <div>News Feed</div>
+                </NavLink>
+                <NavLink to="/mobile/events" className="sideBarEvents">
+                  <div>Events</div>
+                </NavLink>
+                <NavLink to="/mobile/profile" className="sideBarProfile">
+                  <div>Profile</div>
+                </NavLink>
+              </div>
+            }
+            open={this.state.sidebarOpen}
+            onSetOpen={this.onSetSidebarOpen}
+            styles={{
+              sidebar: {
+                background: '#096dd9',
+                width: 300
+              },
+              root: {
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                overflow: 'hidden'
+              }
+            }}
+          ></Sidebar>
+=======
                   <DatePicker onChange={onChange} />
+>>>>>>> f2e31f6bec582fb4edf45256733ee8dfc4f6c448
 
                   <Button style={{ margin: "20px 20px 20px 0" }}>
                     <Icon type="check" /> Done

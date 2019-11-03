@@ -7,17 +7,14 @@ import * as serviceWorker from './serviceWorker';
 // 1
 import {ApolloProvider} from 'react-apollo';
 import {ApolloClient} from 'apollo-client';
-import {createHttpLink} from 'apollo-link-http';
 import {InMemoryCache} from 'apollo-cache-inmemory';
+import uploadLink from './graphql/config/upload-link';
 
 // 2
-const httpLink = createHttpLink({
-  uri: 'http://localhost:4000'
-});
 
 // 3
 const client = new ApolloClient({
-  link: httpLink,
+  link: uploadLink,
   cache: new InMemoryCache()
 });
 
