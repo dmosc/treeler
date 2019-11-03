@@ -5,6 +5,8 @@
 # import * from "tree.graphql"
 # import * from "soil.graphql"
 
+scalar upload
+
 type Query {
   # User
   user(id: ID!): User
@@ -35,4 +37,7 @@ type Mutation {
   soil(soil: SoilInput!): Soil
   # Tree
   tree(tree: TreeInput!): Tree
+
+  # Misc
+  fileUpload(file: upload!, folderKey: String!, id: ID!): String!
 }

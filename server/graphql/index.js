@@ -25,6 +25,6 @@ const server = new ApolloServer({
   }
 });
 
-server.applyMiddleware({app});
+server.applyMiddleware({app, cors: {origin: true, credentials: true}});
 
 export default server;

@@ -184,10 +184,7 @@ class Home extends Component {
                 <div className="sideBarTreeles">290 treelers</div>
                 <div className="rectangle10"></div>
 
-                <NavLink
-                  to="/mobile/registerTree"
-                  className="sideBarRegisterTree"
-                >
+                <NavLink to="/camera" className="sideBarRegisterTree">
                   <div>Register Tree</div>
                 </NavLink>
                 <NavLink to="/mobile/myTrees" className="sideBarMyTrees">

@@ -1,3 +1,5 @@
+import {GraphQLUpload} from 'graphql-upload';
+
 // User
 import userQueries from './user/queries';
 import userMutations from './user/mutations';
@@ -22,6 +24,9 @@ import voteMutations from './vote/mutations';
 import soilQueries from './soil/queries';
 import soilMutations from './soil/mutations';
 
+// Misc
+import miscMutations from './misc/mutations';
+
 const resolvers = {
   Query: {
     ...userQueries,
@@ -37,8 +42,10 @@ const resolvers = {
     ...postMutations,
     ...treeMutations,
     ...voteMutations,
-    ...soilMutations
-  }
+    ...soilMutations,
+    ...miscMutations
+  },
+  upload: GraphQLUpload
 };
 
 export default resolvers;

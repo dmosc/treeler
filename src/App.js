@@ -3,8 +3,11 @@ import {isMobile} from 'react-device-detect';
 import Mobile from './mobile/index';
 import Web from './web/index';
 import 'antd/dist/antd.css';
+import {withApollo} from 'react-apollo';
 
-function App() {
+function App(props) {
+  const {client} = props;
+  console.log(client);
   if (isMobile) {
     return <Mobile />;
   } else {
@@ -12,4 +15,4 @@ function App() {
   }
 }
 
-export default App;
+export default withApollo(App);
