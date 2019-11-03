@@ -1,37 +1,31 @@
-import React, { Component } from "react";
-import Card from "../../components/card";
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Redirect
-} from "react-router-dom";
+import React, {Component} from 'react';
+import Card from '../../components/card';
+import {BrowserRouter as Router, Route, Link, Redirect} from 'react-router-dom';
 
 class NewsFeed extends Component {
   render() {
     let data = [
       {
-        nombre: "Jorge",
-        id: "34567890"
+        nombre: 'Jorge',
+        id: '34567890'
       },
       {
-        nombre: "JorgeAA",
-        id: "34567890"
+        nombre: 'JorgeAA',
+        id: '34567890'
       },
       {
-        nombre: "JorgeAAA",
-        id: "3dddddddd"
+        nombre: 'JorgeAAA',
+        id: '3dddddddd'
       },
       {
-        nombre: "JorgeA322",
-        id: "3dddeef"
+        nombre: 'JorgeA322',
+        id: '3dddeef'
       }
     ];
-    console.log(data);
     return (
       <div>
         <div className="feedTitle">
-          <h2>Post Feed</h2>
+          <h2>Feed</h2>
         </div>
         <div className="pprruueebbaa">
           <ul className="ulllll">
@@ -39,7 +33,7 @@ class NewsFeed extends Component {
               data.map(post => {
                 {
                   return (
-                    <Link to={"/post/" + post.id}>
+                    <Link to={'/post/' + post.id}>
                       <Card post={post} key={data.id} />
                     </Link>
                   );

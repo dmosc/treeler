@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import { NavLink } from "react-router-dom";
-import RealTimeChart from "./views/Graph";
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
+import Graph from './views/Graph';
 //import siglium from "./img/sigliumDefault.png";
 //import logoNombre from "./img/logoNombre.png";
 
@@ -13,12 +13,12 @@ class SideBar extends Component {
         <Router>
           <Redirect from="/" exact to="/home" />
 
-          <div style={{ display: "flex" }}>
+          <div style={{display: 'flex'}}>
             <div
               style={{
-                padding: "0%",
-                height: "100%",
-                width: "17%"
+                padding: '0%',
+                height: '100%',
+                width: '17%'
               }}
             >
               <div className="sideBar">
@@ -36,7 +36,7 @@ class SideBar extends Component {
                     />
                     {/* <img src={logoNombre} className="logoNombre" alt="logo" /> */}
                     {/* <img src={siglium} className="siglium" alt="logo" />{" "} */}
-                    <div className="schoolName">Treeler</div>{" "}
+                    <div className="schoolName">Treeler</div>{' '}
                   </div>
                   <NavLink
                     to="/trees"
@@ -113,9 +113,9 @@ class SideBar extends Component {
               </div>
             </div>
           </div>
-          <Route exact path="/" />
-          <Route exact path="/graph" component={RealTimeChart} />
-          <Route exact path="/mobile/events" component={RealTimeChart} />
+          <Route exact path="/" component={Graph} />
+          <Route exact path="/graph" component={Graph} />
+          <Route exact path="/mobile/events" component={Graph} />
         </Router>
       </div>
     );

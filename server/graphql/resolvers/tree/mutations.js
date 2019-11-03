@@ -8,8 +8,10 @@ const treeMutations = {
 
     try {
       await tree.save();
+      console.log(tree);
       return tree;
     } catch (e) {
+      console.log(e);
       return null;
     }
   }

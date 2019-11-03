@@ -1,13 +1,9 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { Home, CameraView } from "./views/index";
-import "antd/dist/antd.css";
-import "./index.css";
-import { NavLink } from "react-router-dom";
-import Sidebar from "react-sidebar";
-import NewsFeed from "./views/Feed";
-import MyTrees from "./views/MyTrees";
-import Events from "./views/Events";
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
+import {Home, CameraView, NewsFeed} from './views/index';
+import Sidebar from 'react-sidebar';
+import 'antd/dist/antd.css';
+import './index.css';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -21,10 +17,10 @@ class Mobile extends Component {
     this.handleMapReady = this.handleMapReady.bind(this);
   }
   onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
+    this.setState({sidebarOpen: open});
   }
   handleMapReady(mapProps, map) {
-    this.setState({ map: map });
+    this.setState({map: map});
   }
 
   componentWillMount() {
@@ -36,11 +32,11 @@ class Mobile extends Component {
   }
 
   onSetSidebarOpen(open) {
-    this.setState({ sidebarOpen: open });
+    this.setState({sidebarOpen: open});
   }
 
   mediaQueryChanged() {
-    this.setState({ sidebarDocked: mql.matches, sidebarOpen: false });
+    this.setState({sidebarDocked: mql.matches, sidebarOpen: false});
   }
   render() {
     return (
@@ -54,24 +50,41 @@ class Mobile extends Component {
                 <div className="rectangle10"></div>
 
                 <NavLink
-                  to="/mobile/registerTree"
+                  onClick={() => this.onSetSidebarOpen(false)}
+                  to="/camera"
                   className="sideBarRegisterTree"
                 >
-                  <div>Register Tree</div>
+                  <div>Plant a tree</div>
                 </NavLink>
-                <NavLink to="/mobile/myTrees" className="sideBarMyTrees">
-                  <div>My Trees</div>
+                <NavLink
+                  onClick={() => this.onSetSidebarOpen(false)}
+                  to="/myTrees"
+                  className="sideBarMyTrees"
+                >
+                  <div>My trees</div>
                 </NavLink>
-                <NavLink to="/mobile/newsFeed" className="sideBarNewsFeed">
-                  <div>News Feed</div>
+                <NavLink
+                  onClick={() => this.onSetSidebarOpen(false)}
+                  to="/newsFeed"
+                  className="sideBarNewsFeed"
+                >
+                  <div>Feed</div>
                 </NavLink>
-                <NavLink to="/mobile/events" className="sideBarEvents">
+                <NavLink
+                  onClick={() => this.onSetSidebarOpen(false)}
+                  to="/events"
+                  className="sideBarEvents"
+                >
                   <div>Events</div>
                 </NavLink>
-                <NavLink to="/mobile/profile" className="sideBarProfile">
+                <NavLink
+                  onClick={() => this.onSetSidebarOpen(false)}
+                  to="/profile"
+                  className="sideBarProfile"
+                >
                   <div>Profile</div>
                 </NavLink>
-                <NavLink to="/">
+                <NavLink onClick={() => this.onSetSidebarOpen(false)} to="/">
                   <div>Home</div>
                 </NavLink>
               </div>
@@ -80,16 +93,16 @@ class Mobile extends Component {
             onSetOpen={this.onSetSidebarOpen}
             styles={{
               sidebar: {
-                background: "#096dd9",
+                background: '#096dd9',
                 width: 300
               },
               root: {
-                position: "absolute",
+                position: 'absolute',
                 top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0,
-                overflow: "hidden"
+                overflow: 'hidden'
               }
             }}
           ></Sidebar>
@@ -100,7 +113,7 @@ class Mobile extends Component {
             alt="logo"
           />
           <Route exact path="/" component={Home} />
-          <Route exact path="/mobile/newsFeed" component={NewsFeed} />
+          <Route exact path="/newsFeed" component={NewsFeed} />
           <Route exact path="/events" component={Home} />
           <Route exact path="/trees" component={Home} />
           <Route exact path="/camera" component={CameraView} />

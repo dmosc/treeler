@@ -1,23 +1,37 @@
-import React, { Profiler } from "react";
-import { Button, Icon, Avatar, Card } from "antd";
-import "../index.css";
+import React, {Profiler} from 'react';
+import {Button, Icon, Avatar, Card, Radio} from 'antd';
+import '../index.css';
 
-const { Meta } = Card;
+const {Meta} = Card;
 
-const card = ({ post }) => {
-  console.log({ post });
+const card = ({post: {nombre}}) => {
   return (
-    <li className="listaActividades">
-      <Card style={{ width: 200, marginTop: 16 }}>
-        <Meta avatar={<Avatar src="/static/daniel.jpg" />} title={post.nombre}>
-          Planted By:{post.name}
-        </Meta>
-        <Button type="primary" shape="circle">
-          {" "}
-          <Icon type="like" theme="twoTone" />
-        </Button>
-      </Card>
-    </li>
+    <Card
+      style={{margin: '40px'}}
+      hoverable
+      style={{width: '50%', left: '-8%'}}
+      cover={
+        <img
+          alt="example"
+          src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+          height="200"
+        />
+      }
+    >
+      <Meta title={`Planted by: ${nombre}`} />
+      <Meta title="Date: " />
+      <Meta title="Place: " />
+      <Meta title="Treelers: " />
+      <br></br>
+
+      <Button
+        style={{right: '-90%'}}
+        type="primary"
+        shape="circle"
+        icon="like"
+        size="large"
+      />
+    </Card>
   );
 };
 

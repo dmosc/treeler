@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 .logotreeLeer {
@@ -55,7 +55,7 @@ code {
   -ms-transform: rotate(0deg); /* IE 9 */
   -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
   transform: rotate(0deg);
-  font-family: "Helvetica", Helvetica, Arial, serif;
+  font-family: 'Helvetica', Helvetica, Arial, serif;
   font-size: calc(0.8vw + 0.4vh + 0.375vmin);
   color: rgba(64, 78, 91, 1);
   text-align: left;
@@ -103,6 +103,69 @@ code {
   -ms-transform: rotate(0deg); /* IE 9 */
   -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
   transform: rotate(0deg);
+}
+.topbarmenu {
+  background-color: rgba(255, 255, 255, 0);
+  top: -1%;
+  height: 18.4%;
+  width: 90%;
+  position: absolute;
+  margin: 0;
+  left: 19%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.left {
+  position: relative;
+  left: 73%;
+}
+.background43 {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  top: -70%;
+  height: 240%;
+  width: 68%;
+  position: absolute;
+  margin: 0;
+  left: -1.5%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.home1 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 40%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  vertical-align: middle;
+  left: 5%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+  font-family: 'Helvetica', Helvetica, Arial, serif;
+  font-size: calc(0.9vw + 0.6vh + 0.375vmin);
+  color: rgba(64, 78, 91, 1);
+  text-align: left;
+}
+.topbarmenu .background {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0px;
+  height: 100%;
+  width: 90%;
+  position: absolute;
+  margin: 0;
+  left: none;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.charts {
+  position: absolute;
+  top: 20%;
+  left: 22%;
 }
 .logoNombre {
   top: 2%;
