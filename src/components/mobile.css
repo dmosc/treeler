@@ -1,193 +1,201 @@
-.profileImg{
-    position: absolute;
-    width: 15%;
-    border-radius: 50px;;
+.profileImg {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 15%;
+  border-radius: 50px;
 }
-.removeButton{
-    border:none;
-    background-color: white;
+.removeButton {
+  border: none;
+  background-color: white;
 }
-.profileIMGSideBar{
-    position: absolute;
-    border-radius: 50%;
-    top:2%;
-    height:8%;
-    width: 23%;
-    left:5%;
+.check {
+  background-color: black;
 }
-.sideBarName{
-    position: absolute;
-    top:3%;
-    color:white;
-    font-weight: bold;
-    left:33%;
-    font-size: calc(1.3vw + 1.3vh + .65vmin);
-    font-family         : "Verdana"
+.registerTreeButton {
+  position: absolute;
+  top: 85%;
+  left: 60%;
 }
-.sideBarTreeles{
-    position: absolute;
-    top:6%;
-    font-weight: bold;
-    left:41%;
-    font-size: calc(1vw + 1vh + .5vmin);
-    font-family         : "Helvetica", Helvetica, Arial, serif;
+.profileIMGSideBar {
+  position: absolute;
+  border-radius: 50%;
+  top: 2%;
+  height: 8%;
+  width: 23%;
+  left: 5%;
+}
+.sideBarName {
+  position: absolute;
+  top: 3%;
+  color: white;
+  font-weight: bold;
+  left: 33%;
+  font-size: calc(1.3vw + 1.3vh + 0.65vmin);
+  font-family: "Verdana";
+}
+.sideBarTreeles {
+  position: absolute;
+  top: 6%;
+  font-weight: bold;
+  left: 41%;
+  font-size: calc(1vw + 1vh + 0.5vmin);
+  font-family: "Helvetica", Helvetica, Arial, serif;
 }
 .rectangle1 {
-    background-color    : rgba(255,255,255,0.0);
-    top                 : 11%;
-    height              : 1px;
-    box-sizing          : border-box;
-    width               : 100%;
-    position            : absolute;
-    margin              : 0;
-    border-style        : solid;
-    border-width        : 1px;
-    border-color        : rgba(200, 199, 204, 1.0);
-    -ms-transform       : rotate(0deg); /* IE 9 */
-    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-    transform           : rotate(0deg);
-  }
-  .rectangle10{
-    background-color    : rgba(255,255,255,0.0);
-    top                 : 11%;
-    left:10%;
-    height              : 1px;
-    box-sizing          : border-box;
-    width               : 80%;
-    position            : absolute;
-    margin              : 0;
-    border-style        : solid;
-    border-width        : 1px;
-    border-color        : rgba(200, 199, 204, 1.0);
-    -ms-transform       : rotate(0deg); /* IE 9 */
-    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-    transform           : rotate(0deg);
-  }
-  .map{
-      position: relative;;
-      top:9vh;
-      height:60vh;
-      left:-1%;
-  }
-  .rectangle2 {
-    background-color    : rgba(255,255,255,0.0);
-    top                 : 72%;
-    height              : 1px;
-    box-sizing          : border-box;
-    width               : 100%;
-    position            : absolute;
-    margin              : 0;
-    border-style        : solid;
-    border-width        : 1px;
-    border-color        : rgba(200, 199, 204, 1.0);
-    -ms-transform       : rotate(0deg); /* IE 9 */
-    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
-    transform           : rotate(0deg);
-  }
-  .treelers{
-      position: absolute;
-      top:80%;
-      font-size:calc(1.2vw + 1.2vh + .6vmin);
-      left:5%;
-  }
-  .welcomeBack{
-    position: absolute;
-    top:75%;
-    left:18%;
-    font-size:calc(1.5vw + 1.5vh + .75vmin);
-  }
-  .treelersNum{
-    position: absolute;
-    top:83%;
-    left:7%;
-    font-size:calc(1.2vw + 1.2vh + .6vmin);
-    text-align: center;
-  }
-  .logohomeScreen{
-      position: absolute;
-      height:28%;
-      width:80%;
-      top:-8%;
-      left:13%;
-  }
-  .actividadespublicadascopy78 {
-    width               : 75vw;
-    height              : 70vh;
-    left: -11vw;
-    top:-30vh;
-    position            : absolute;
-    overflow            : hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color    : rgba(255, 255, 255, 1.0);
-  }
-  .notifyButton{
-      position: absolute;
-      top:80%;
-      left:70%;
-  }
-.registerTreeTitle{
-    font-size:calc(1.4vw + 1.4vh + .7vmin);
-    position: relative;
-    left:30%;
+  background-color: rgba(255, 255, 255, 0);
+  top: 11%;
+  height: 1px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(200, 199, 204, 1);
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
 }
-.sideBarRegisterTree{
-    top                 : 15%;
-    height              : 5%;
-    font-family: "Verdana";
-    font-size:calc(1.2vw + 1.2vh + .6vmin);
-    color:white;
-    border-radius       : 15px;
-    width               : 80%;
-    position            : absolute;
-    margin              : 0;
-    left                : 10%;
+.rectangle10 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 11%;
+  left: 10%;
+  height: 1px;
+  box-sizing: border-box;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(200, 199, 204, 1);
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
 }
-.sideBarMyTrees{
-    top                 : 20%;
-    height              : 5%;
-    font-size:calc(1.2vw + 1.2vh + .6vmin);
-    border-radius       : 15px;
-    width               : 80%;
-    position            : absolute;
-    font-family: "Verdana";
-    color:white;
-    margin              : 0;
-    left                : 10%;
+.map {
+  position: relative;
+  height: 600px;
 }
-.sideBarNewsFeed{
-    top                 : 25%;
-    height              : 5%;
-    font-size:calc(1.2vw + 1.2vh + .6vmin);
-    border-radius       : 15px;
-    width               : 80%;
-    position            : absolute;
-    font-family: "Verdana";
-    color:white;
-    margin              : 0;
-    left                : 10%;
+.rectangle2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 72%;
+  height: 1px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(200, 199, 204, 1);
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
 }
-.sideBarEvents{
-    top                 : 30%;
-    height              : 5%;
-    font-size:calc(1.2vw + 1.2vh + .6vmin);
-    border-radius       : 15px;
-    width               : 80%;
-    position            : absolute;
-    font-family: "Verdana";
-    color:white;
-    margin              : 0;
-    left                : 10%;
+.treelers {
+  position: absolute;
+  top: 80%;
+  font-size: calc(1.2vw + 1.2vh + 0.6vmin);
+  left: 5%;
 }
-.sideBarProfile{
-    top                 : 35%;
-    height              : 5%;
-    font-size:calc(1.2vw + 1.2vh + .6vmin);
-    border-radius       : 15px;
-    width               : 80%;
-    position            : absolute;
-    font-family: "Verdana";
-    color:white;
-    margin              : 0;
-    left                : 10%;
+.welcomeBack {
+  position: absolute;
+  top: 75%;
+  left: 18%;
+  font-size: calc(1.5vw + 1.5vh + 0.75vmin);
+}
+.treelersNum {
+  position: absolute;
+  top: 83%;
+  left: 7%;
+  font-size: calc(1.2vw + 1.2vh + 0.6vmin);
+  text-align: center;
+}
+.logohomeScreen {
+  position: absolute;
+  height: 28%;
+  width: 80%;
+  top: -8%;
+  left: 13%;
+}
+.actividadespublicadascopy78 {
+  width: 75vw;
+  height: 70vh;
+  left: -11vw;
+  top: -30vh;
+  position: absolute;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(255, 255, 255, 1);
+}
+.notifyButton {
+  position: absolute;
+  top: 80%;
+  left: 70%;
+}
+.registerTreeTitle {
+  font-size: calc(1.4vw + 1.4vh + 0.7vmin);
+  position: relative;
+  left: 30%;
+}
+.sideBarRegisterTree {
+  top: 15%;
+  height: 5%;
+  font-family: "Verdana";
+  font-size: calc(1.2vw + 1.2vh + 0.6vmin);
+  color: white;
+  border-radius: 15px;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  left: 10%;
+}
+.sideBarMyTrees {
+  top: 20%;
+  height: 5%;
+  font-size: calc(1.2vw + 1.2vh + 0.6vmin);
+  border-radius: 15px;
+  width: 80%;
+  position: absolute;
+  font-family: "Verdana";
+  color: white;
+  margin: 0;
+  left: 10%;
+}
+.sideBarNewsFeed {
+  top: 25%;
+  height: 5%;
+  font-size: calc(1.2vw + 1.2vh + 0.6vmin);
+  border-radius: 15px;
+  width: 80%;
+  position: absolute;
+  font-family: "Verdana";
+  color: white;
+  margin: 0;
+  left: 10%;
+}
+.sideBarEvents {
+  top: 30%;
+  height: 5%;
+  font-size: calc(1.2vw + 1.2vh + 0.6vmin);
+  border-radius: 15px;
+  width: 80%;
+  position: absolute;
+  font-family: "Verdana";
+  color: white;
+  margin: 0;
+  left: 10%;
+}
+.sideBarProfile {
+  top: 35%;
+  height: 5%;
+  font-size: calc(1.2vw + 1.2vh + 0.6vmin);
+  border-radius: 15px;
+  width: 80%;
+  position: absolute;
+  font-family: "Verdana";
+  color: white;
+  margin: 0;
+  left: 10%;
 }
