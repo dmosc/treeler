@@ -9,6 +9,7 @@ import HomeScreen from './web'
 import GoogleMapReact from 'google-map-react'
 import logo from '../img/2.png'
 import MobileHomeScreen from './mobileHomeScreen'
+import 'antd/dist/antd.css';
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -135,9 +136,7 @@ class Mobile extends Component {
                         }}>
                     </Sidebar>
                     <img src={logo} className='logohomeScreen' alt="logo" />
-                    <button className='removeButton' onClick={() => this.onSetSidebarOpen(true)}>
-                        <img src={IMG} className='profileImg' alt="logo" />
-                    </button>
+                      <img onClick={() => this.onSetSidebarOpen(true)} src={IMG} className='profileImg' alt="logo" />
                     <div className="rectangle1">
                     </div>
                     <img src={logo} className='logohomeScreen' alt="logo" />
