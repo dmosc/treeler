@@ -5,8 +5,41 @@ type Tree {
 }
 
 enum TreeType {
-  PINE
-  COTTONWOOD
+  Dawn_redwood
+  Maidenhair
+  Shagbark_hickory
+  Sugarberry
+  White_oak
+  Spindle_Bush
+  White_Wax
+  Winter_Flowering_Cherry
+  Butterfly
+  Bush
+  Mahonia
+  japonica
+  soft
+  maple
+  honey
+  locust
+  cottonwood
+  willow
+  Douglas
+  fir
+  Heather
+  Lantern
+  Witch_Hazel
+  Camellia
+  Rhododendron
+  Lavender
+  Artemisia
+  Rosemary
+  Sedum
+  Annuals
+  weeping_willow
+  bald_cypress
+  red_twig_dogwood
+  river_birch
+  red_chokeberry
 }
 
 # Inputs
