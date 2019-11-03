@@ -57,6 +57,10 @@ class MobileHomeScreen extends Component {
                                     <DatePicker
                                         onChange={onChange} />
 
+                                    <Button style={{ margin: '20px 20px 20px 0' }}>
+                                        <Icon type="check" /> Done
+                                        </Button>
+
                                 </form>
                                 <div className="mRectangle20">
                                 </div>
