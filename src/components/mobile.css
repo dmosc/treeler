@@ -8,17 +8,27 @@
     background-color: white;
 }
 .profileIMGSideBar{
-    position: relative;
-    border-radius: 50px;
-    height:10%;
-    width: 20%;
+    position: absolute;
+    border-radius: 50%;
+    top:2%;
+    height:8%;
+    width: 23%;
     left:5%;
 }
 .sideBarName{
     position: absolute;
-    top:22%;
+    top:3%;
+    color:white;
     font-weight: bold;
-    left:5%;
+    left:33%;
+    font-size: calc(1.3vw + 1.3vh + .65vmin);
+    font-family         : "Verdana"
+}
+.sideBarTreeles{
+    position: absolute;
+    top:6%;
+    font-weight: bold;
+    left:41%;
     font-size: calc(1vw + 1vh + .5vmin);
     font-family         : "Helvetica", Helvetica, Arial, serif;
 }
@@ -28,6 +38,22 @@
     height              : 1px;
     box-sizing          : border-box;
     width               : 100%;
+    position            : absolute;
+    margin              : 0;
+    border-style        : solid;
+    border-width        : 1px;
+    border-color        : rgba(200, 199, 204, 1.0);
+    -ms-transform       : rotate(0deg); /* IE 9 */
+    -webkit-transform   : rotate(0deg); /* Chrome, Safari, Opera */
+    transform           : rotate(0deg);
+  }
+  .rectangle10{
+    background-color    : rgba(255,255,255,0.0);
+    top                 : 11%;
+    left:10%;
+    height              : 1px;
+    box-sizing          : border-box;
+    width               : 80%;
     position            : absolute;
     margin              : 0;
     border-style        : solid;
@@ -100,3 +126,68 @@
       top:80%;
       left:70%;
   }
+.registerTreeTitle{
+    font-size:calc(1.4vw + 1.4vh + .7vmin);
+    position: relative;
+    left:30%;
+}
+.sideBarRegisterTree{
+    top                 : 15%;
+    height              : 5%;
+    font-family: "Verdana";
+    font-size:calc(1.2vw + 1.2vh + .6vmin);
+    color:white;
+    border-radius       : 15px;
+    width               : 80%;
+    position            : absolute;
+    margin              : 0;
+    left                : 10%;
+}
+.sideBarMyTrees{
+    top                 : 20%;
+    height              : 5%;
+    font-size:calc(1.2vw + 1.2vh + .6vmin);
+    border-radius       : 15px;
+    width               : 80%;
+    position            : absolute;
+    font-family: "Verdana";
+    color:white;
+    margin              : 0;
+    left                : 10%;
+}
+.sideBarNewsFeed{
+    top                 : 25%;
+    height              : 5%;
+    font-size:calc(1.2vw + 1.2vh + .6vmin);
+    border-radius       : 15px;
+    width               : 80%;
+    position            : absolute;
+    font-family: "Verdana";
+    color:white;
+    margin              : 0;
+    left                : 10%;
+}
+.sideBarEvents{
+    top                 : 30%;
+    height              : 5%;
+    font-size:calc(1.2vw + 1.2vh + .6vmin);
+    border-radius       : 15px;
+    width               : 80%;
+    position            : absolute;
+    font-family: "Verdana";
+    color:white;
+    margin              : 0;
+    left                : 10%;
+}
+.sideBarProfile{
+    top                 : 35%;
+    height              : 5%;
+    font-size:calc(1.2vw + 1.2vh + .6vmin);
+    border-radius       : 15px;
+    width               : 80%;
+    position            : absolute;
+    font-family: "Verdana";
+    color:white;
+    margin              : 0;
+    left                : 10%;
+}

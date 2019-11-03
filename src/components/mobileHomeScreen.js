@@ -8,6 +8,7 @@ import Popup from "reactjs-popup";
 import MAP from "../img/map.jpg"
 import HomeScreen from './web'
 import GoogleMapReact from 'google-map-react'
+import { Input } from 'antd';
 import logo from '../img/2.png'
 
 class MobileHomeScreen extends Component {
@@ -34,26 +35,41 @@ class MobileHomeScreen extends Component {
                     {close => (
                         <div className="modal">
                             <div className="actividadespublicadascopy78">
-                                <div >
+                                <div className='registerTreeTitle'>
                                     Register Tree
             </div>
                                 <form>
-                                    <input type="file" placeholder="img "
+                                    <div>
+                                        Image:
+                                        </div>
+                                    <Input className='formTop' type="file" placeholder="img "
                                         value={this.state.img}
                                         onChange={this.handleChange}
                                         name="img" />
-                                    <input type="text" placeholder="Place "
+                                    <div>
+                                        Place:
+                                            </div>
+                                    <Input type="text" placeholder="Place "
                                         value={this.state.place}
                                         onChange={this.handleChange}
                                         name="type" />
-                                    <input type="text" placeholder="Type"
+                                    <div>
+                                        Type of Tree
+                                            </div>
+                                    <Input type="text" placeholder="Type"
                                         value={this.state.type}
                                         onChange={this.handleChange}
                                         name="type" />
-                                    <input type="date" placeholder="Date "
+                                    <div>
+                                        Date
+                                            </div>
+                                    <Input type="date" placeholder="Date "
                                         value={this.state.date}
                                         onChange={this.handleChange}
                                         name="date" />
+                                    <button>
+                                        Submit
+                                            </button>
                                 </form>
                                 <div className="mRectangle20">
                                 </div>

@@ -85,33 +85,33 @@ class Mobile extends Component {
                             <div className='sideBarName'>
                                 Jorge Abdo
                                 </div>
-                            <div>
+                            <div className='sideBarTreeles'>
                                 290 treelers
                                 </div>
-                            <div className="mSRectangle10">
+                            <div className="rectangle10">
                             </div>
 
-                            <NavLink to='/mobile/registerTree'>
+                            <NavLink to='/mobile/registerTree' className='sideBarRegisterTree'>
                                 <div>
                                     Register Tree
                                     </div>
                             </NavLink>
-                            <NavLink to='/mobile/myTrees'>
+                            <NavLink to='/mobile/myTrees' className='sideBarMyTrees'>
                                 <div>
                                     My Trees
                                     </div>
                             </NavLink>
-                            <NavLink to='/mobile/newsFeed'>
+                            <NavLink to='/mobile/newsFeed' className='sideBarNewsFeed'>
                                 <div>
                                     News Feed
                                     </div>
                             </NavLink>
-                            <NavLink to='/mobile/events'>
+                            <NavLink to='/mobile/events' className='sideBarEvents'>
                                 <div>
                                     Events
                                     </div>
                             </NavLink>
-                            <NavLink to='/mobile/profile'>
+                            <NavLink to='/mobile/profile' className='sideBarProfile'>
                                 <div>
                                     Profile
                                     </div>
@@ -122,7 +122,7 @@ class Mobile extends Component {
                         onSetOpen={this.onSetSidebarOpen}
                         styles={{
                             sidebar: {
-                                background: "white",
+                                background: "#0277BD",
                                 width: 300,
                             }, root: {
                                 position: "absolute",
