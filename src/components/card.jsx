@@ -1,37 +1,24 @@
 import React, {Profiler} from 'react';
 import {Button, Icon, Avatar, Card, Radio} from 'antd';
-import '../index.css';
 
 const {Meta} = Card;
 
 const card = ({post: {nombre}}) => {
   return (
-    <Card
-      style={{margin: '40px'}}
-      hoverable
-      style={{width: '50%', left: '-8%'}}
-      cover={
+    <div className="card transaction">
+      <div className="transaction__column">
         <img
-          alt="example"
-          src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-          height="200"
+          src="http://picsum.com/100"
+          alt=""
+          className="transaction_profileImage"
         />
-      }
-    >
-      <Meta title={`Planted by: ${nombre}`} />
-      <Meta title="Date: " />
-      <Meta title="Place: " />
-      <Meta title="Treelers: " />
-      <br></br>
-
-      <Button
-        style={{right: '-90%'}}
-        type="primary"
-        shape="circle"
-        icon="like"
-        size="large"
-      />
-    </Card>
+      </div>
+      <div className="transaction__column">
+        <div className="transaction__title">title</div>
+        <div className="transaction__date">fecha</div>
+        <div className="transaction__comments">comments</div>
+      </div>
+    </div>
   );
 };
 

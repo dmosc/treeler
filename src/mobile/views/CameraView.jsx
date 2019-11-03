@@ -5,7 +5,7 @@ import ImagePreview from '../../components/ImagePreview';
 import {withApollo} from 'react-apollo';
 import SoilTypeChart from '../../components/SoilTypeChart';
 import Popup from 'reactjs-popup';
-import {Upload, Button, Icon, Input, DatePicker} from 'antd';
+import {Upload, Button, Icon, Input, DatePicker, Menu, Dropdown} from 'antd';
 import MentionsTag from '../../components/MentionsTag';
 
 const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
@@ -28,10 +28,44 @@ const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
   return blob;
 };
 
+const trees = {
+  clay: [
+    'Dawn redwood',
+    'Maidenhair tree',
+    'Shagbark hickory',
+    'Sugarberry',
+    'White oak'
+  ],
+  chalky: [
+    'Spindle Bush',
+    'White Wax Tree',
+    'Winter Flowering Cherry',
+    'Butterfly Bush',
+    'Mahonia japonica'
+  ],
+  loamy: ['soft maple', 'honey locust', 'cottonwood', 'willow', 'Douglas fir'],
+  peaty: [
+    'Heather',
+    'Lantern Trees',
+    'Witch Hazel',
+    'Camellia',
+    'Rhododendron'
+  ],
+  sandy: ['Lavender', 'Artemisia', 'Rosemary', 'Sedum', 'Annuals'],
+  silty: [
+    'weeping willow',
+    'bald cypress',
+    'red twig dogwood',
+    'river birch',
+    'red chokeberry'
+  ]
+};
+
 class CameraView extends Component {
   state = {
     results: null,
     dataUri: null,
+    menu: null,
     loading: false
   };
 
@@ -69,7 +103,23 @@ class CameraView extends Component {
       name
     }));
 
-    this.setState({results, dataUri});
+    // const menu = results[0].map((tree, i) => (
+    //   <Menu.Item key={i}>
+    //     <a href="http://www.alipay.com/">{tree}</a>
+    //   </Menu.Item>
+    // ));
+
+    const menu = (
+      <Menu>
+        <Menu.Item key="0">{trees[results[0].name][0]}</Menu.Item>
+        <Menu.Item key="1">{trees[results[0].name][1]}</Menu.Item>
+        <Menu.Item key="2">{trees[results[0].name][2]}</Menu.Item>
+        <Menu.Item key="3">{trees[results[0].name][3]}</Menu.Item>
+        <Menu.Item key="4">{trees[results[0].name][4]}</Menu.Item>
+      </Menu>
+    );
+
+    this.setState({results, dataUri, menu});
   }
 
   onTakePhotoAnimationDone(dataUri) {
@@ -77,13 +127,13 @@ class CameraView extends Component {
   }
 
   render() {
-    const {results, dataUri, loading} = this.state;
+    const {results, menu, dataUri, loading} = this.state;
     return (
       <div className="App">
         {dataUri ? (
           <ImagePreview image={dataUri} />
         ) : loading ? (
-          <div>Analysing...</div>
+          <Icon style={{margin: '30px'}} type="loading" />
         ) : (
           <Camera
             idealFacingMode={FACING_MODES.ENVIRONMENT}
@@ -109,10 +159,21 @@ class CameraView extends Component {
         )}
 
         <div style={{padding: '40px'}}>
-          <h3>Take a picture of the soil in order to evaluate it!</h3>
+          {(menu && (
+            <h3>We've found some viable options with respect to this soil.</h3>
+          )) || <h3>Take a picture of the soil in order to evaluate it!</h3>}
           <Input style={{marginBottom: '20px'}} placeholder="Place" />
           <Input style={{marginBottom: '20px'}} placeholder="Type" />
           <DatePicker style={{marginBottom: '20px'}} onChange={'onChange'} />
+          <Dropdown overlay={menu} trigger={['click']}>
+            <a
+              style={{marginLeft: '40px'}}
+              className="ant-dropdown-link"
+              href="#"
+            >
+              Tree options <Icon type="scan" />
+            </a>
+          </Dropdown>
           <MentionsTag />
           <Button style={{margin: '20px 20px 20px 0', width: '100%'}}>
             <Icon type="submit" /> Submit

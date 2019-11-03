@@ -1,121 +1,79 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
+import SoilTypeChart from '../components/SoilTypeChart';
 import Graph from './views/Graph';
-//import siglium from "./img/sigliumDefault.png";
-//import logoNombre from "./img/logoNombre.png";
+import {Layout, Menu, Icon} from 'antd';
+const {Header, Content, Footer, Sider} = Layout;
 
+const routes = [
+  {
+    path: '/o2-dashboard',
+    exact: true,
+    main: Graph
+  },
+  {
+    path: '/profile',
+    exact: true,
+    main: Graph
+  }
+];
 class SideBar extends Component {
-  state = {};
+  state = {
+    path: ''
+  };
   render() {
     return (
-      <div className="mainScreen">
+      <div>
         <Router>
-          <Redirect from="/" exact to="/home" />
-
-          <div style={{display: 'flex'}}>
-            <div
-              style={{
-                padding: '0%',
-                height: '100%',
-                width: '17%'
+          <Layout>
+            <Sider
+              breakpoint="lg"
+              collapsedWidth="0"
+              onBreakpoint={broken => {
+                console.log(broken);
+              }}
+              onCollapse={(collapsed, type) => {
+                console.log(collapsed, type);
               }}
             >
-              <div className="sideBar">
-                <ul>
-                  <div>
-                    <img
-                      src="/static/topHeader.png"
-                      className="topHeader"
-                      alt="logo"
-                    />
-                    <img
-                      src="/static/3.png"
-                      className="logoNombre"
-                      alt="logo"
-                    />
-                    {/* <img src={logoNombre} className="logoNombre" alt="logo" /> */}
-                    {/* <img src={siglium} className="siglium" alt="logo" />{" "} */}
-                    <div className="schoolName">Treeler</div>{' '}
-                  </div>
-                  <NavLink
-                    to="/trees"
-                    activeClassName="sideBarImageActive"
-                    className="sideBarImage"
-                  >
-                    <div className="menu">
-                      <div class="activemenuitem">
-                        <div class="rectangle"></div>
-
-                        <div className="menuitem1">
-                          <div class="home2">Trees</div>
-                        </div>
-                        <div class="home1">
-                          <img
-                            src="/static/sprout.png"
-                            className="shape"
-                            alt="logo"
-                          />
-                        </div>
-                      </div>
-                    </div>
+              <Menu theme="dark" mode="inline" defaultSelectedKeys={['4']}>
+                <Menu.Item key="1">
+                  <NavLink exact to="/o2-dashboard">
+                    <Icon type="user" />
+                    <span className="nav-text">O2 Analysis</span>
                   </NavLink>
-                  <p></p>
-                  <NavLink
-                    to="/graph"
-                    activeClassName="sideBarImage2Active"
-                    className="sideBarImage2"
-                    onClick={this.toggleIcon}
-                  >
-                    <div className="menu">
-                      <div>
-                        <div></div>
-
-                        <div className="menuitem1">
-                          <div class="home2">Graph</div>
-                        </div>
-                        <div class="home1">
-                          <img
-                            src="/static/graph.png"
-                            className="shape"
-                            alt="logo"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                </Menu.Item>
+                <Menu.Item key="2">
+                  <NavLink to="/user-activity-dashboard">
+                    <Icon type="video-camera" />
+                    <span className="nav-text">User Activity</span>
                   </NavLink>
-                  <p></p>
-                  <NavLink
-                    to="/settings"
-                    activeClassName="sideBarImage3Active"
-                    className="sideBarImage3"
-                    onClick={this.toggleIconSettings}
-                  >
-                    <div className="menu">
-                      <div>
-                        <div></div>
+                </Menu.Item>
+              </Menu>
 
-                        <div className="menuitem1">
-                          <div class="home2">Settings</div>
-                        </div>
-                        <div class="home1">
-                          <img
-                            src="/static/settings.png"
-                            className="shape"
-                            alt="logo"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </NavLink>
-                  <p></p>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <Route exact path="/" component={Graph} />
-          <Route exact path="/graph" component={Graph} />
-          <Route exact path="/mobile/events" component={Graph} />
+              <Route exact path="/o2-dashboard" component={<div>hello</div>} />
+            </Sider>
+            <Layout>
+              <Header style={{background: '#fff', padding: 0}} />
+              <Content style={{margin: '24px 16px 0'}}>
+                <div
+                  style={{padding: 24, background: '#fff', minHeight: 700}}
+                ></div>
+              </Content>
+              <Footer style={{textAlign: 'center'}}>
+                Ant Design ©2018 Created by Ant UED
+              </Footer>
+            </Layout>
+          </Layout>
+          {routes.map(route => (
+            <Route
+              key={route.path}
+              path={route.path}
+              exact={route.exact}
+              component={route.main}
+            />
+          ))}
         </Router>
       </div>
     );

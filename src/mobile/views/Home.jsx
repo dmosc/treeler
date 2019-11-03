@@ -84,7 +84,7 @@ class Home extends Component {
       }
     };
     return (
-      <div style={{display: 'flex'}}>
+      <div>
         <div className="map">
           <GoogleMapReact
             ref={el => (this._googleMap = el)}
