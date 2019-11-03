@@ -7,7 +7,7 @@ import {
   Redirect
 } from "react-router-dom";
 
-class NewsFeed extends Component {
+class Events extends Component {
   render() {
     let data = [
       {
@@ -21,17 +21,13 @@ class NewsFeed extends Component {
       {
         nombre: "JorgeAAA",
         id: "3dddddddd"
-      },
-      {
-        nombre: "JorgeA322",
-        id: "3dddeef"
       }
     ];
     console.log(data);
     return (
       <div>
         <div className="feedTitle">
-          <h2>Post Feed</h2>
+          <h2>Events</h2>
         </div>
         <div className="pprruueebbaa">
           <ul className="ulllll">
@@ -52,4 +48,4 @@ class NewsFeed extends Component {
   }
 }
 
-export default NewsFeed;
+export default Events;

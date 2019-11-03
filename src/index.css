@@ -11,3 +11,198 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.logotreeLeer {
+  position: relative;
+  top: 2vh;
+}
+.mainScreen {
+  position: fixed;
+  background-color: rgba(245, 248, 250, 1);
+  height: 100%;
+  width: 100%;
+}
+.sideBar {
+  position: fixed;
+  width: 19%;
+  height: 100%;
+  background: #ffffff;
+}
+.menu {
+  top: 30%;
+  left: 10%;
+  position: absolute;
+}
+
+.menuitem1 {
+  background-color: rgba(255, 255, 255, 0);
+  height: 20%;
+  width: 47px;
+  position: absolute;
+  margin: 0;
+  left: 20%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.menuitem1 .home2 {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0px;
+  height: auto;
+  width: auto;
+  position: absolute;
+  margin: 0;
+  left: 110%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+  font-family: "Helvetica", Helvetica, Arial, serif;
+  font-size: calc(0.8vw + 0.4vh + 0.375vmin);
+  color: rgba(64, 78, 91, 1);
+  text-align: left;
+  line-height: 24px;
+}
+.shape {
+  background-color: rgba(255, 255, 255, 0);
+  top: 0px;
+  height: 2%;
+  width: 11%;
+  left: 2vw;
+  position: relative;
+  margin: 0;
+  left: 0px;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.white {
+  color: white;
+}
+.sideBarButton {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.sideBarImage {
+  top: 38%;
+  height: 7%;
+  border-radius: 15px;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  left: 8%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.logoNombre {
+  top: 2%;
+  height: 30%;
+  width: 60%;
+  position: absolute;
+  margin: 0px;
+  left: 17%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.sideBarImage2 {
+  top: 45%;
+  border-radius: 15px;
+  height: 7%;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  left: 8%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.sideBarImage3 {
+  top: 52%;
+  height: 7%;
+  border-radius: 15px;
+  left: 0px;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  left: 8%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.sideBarImageActive {
+  top: 38%;
+  background-color: #f7f9f8;
+  height: 7%;
+  border-radius: 15px;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  left: 8%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.sideBarImage2Active {
+  top: 45%;
+  background-color: #f7f9f8;
+  border-radius: 15px;
+  height: 7%;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  left: 8%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.topHeader {
+  background-color: #ffffff;
+  top: 0px;
+  filter: brightness(1.15);
+  height: 35%;
+  width: 100%;
+  position: absolute;
+  margin: 0px;
+  left: 0px;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.sideBarImage3Active {
+  top: 52%;
+  background-color: #f7f9f8;
+  height: 7%;
+  border-radius: 15px;
+  left: 0px;
+  width: 80%;
+  position: absolute;
+  margin: 0;
+  left: 8%;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+.sideBarImage4 {
+  top: 65%;
+  background-color: none;
+  height: 8%;
+  left: 0px;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+  left: 0px;
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}

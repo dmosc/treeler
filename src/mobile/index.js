@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import { Home } from "./views/index";
-import "antd/dist/antd.css";
 import "./index.css";
 import Sidebar from "react-sidebar";
-import Web from "../web";
 import NewsFeed from "./views/Feed";
+import MyTrees from "./views/MyTrees";
+import Events from "./views/Events";
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -99,10 +99,10 @@ class Mobile extends Component {
           />
           <Route exact path="/" component={Home} />
           <Route exact path="/mobile/newsFeed" component={NewsFeed} />
-          <Route exact path="/events" component={Home} />
-          <Route exact path="/trees" component={Home} />
+          <Route exact path="/mobile/events" component={Events} />
+          <Route exact path="/mobile/myTrees" component={MyTrees} />
           <Route exact path="/profile" component={Home} />
-          <Route exact path="/papa" component={Web} />
+          <Route exact path="/papa" component={Home} />
         </Router>
       </div>
     );
