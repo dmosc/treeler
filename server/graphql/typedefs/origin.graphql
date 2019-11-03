@@ -1,0 +1,15 @@
+# Types
+type Origin {
+  name: String!
+  lng: Float!
+  lat: Float!
+  address: String!
+}
+
+# Inputs
+input OriginInput {
+  name: String!
+  lng: Float!
+  lat: Float!
+  address: String!
+}

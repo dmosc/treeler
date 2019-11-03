@@ -1,0 +1,22 @@
+# Types
+type User {
+  firstName: String!
+  lastName: String!
+  username: String!
+  email: String!
+  password: String
+  profileImage: String
+  active: Boolean!
+  posts: [Post!]
+  points: Int!
+}
+
+# Inputs
+input UserInput {
+  firstName: String!
+  lastName: String!
+  username: String!
+  email: String!
+  password: String!
+  profileImage: String
+}

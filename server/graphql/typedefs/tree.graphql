@@ -1,0 +1,16 @@
+type Tree {
+  image: String!
+  treeType: TreeType
+  points: Int!
+}
+
+enum TreeType {
+  PINE
+  COTTONWOOD
+}
+
+# Inputs
+input TreeInput {
+  image: String!
+  treeType: TreeType
+}
