@@ -7,7 +7,7 @@ import "./mobile.css";
 import IMG from "../img/daniel.jpg";
 import Popup from "reactjs-popup";
 import GoogleMapReact from "google-map-react";
-import { Button, Input, Upload, Icon, DatePicker } from "antd";
+import { Button, Input, Upload, Icon, DatePicker, Typography } from "antd";
 import logo from "../img/2.png";
 
 const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
@@ -16,6 +16,7 @@ function onChange(date, dateString) {
 }
 
 const Marker = ({ text }) => <div>{text}</div>;
+const { Text } = Typography;
 
 const mql = window.matchMedia(`(min-width: 800px)`);
 
@@ -202,7 +203,7 @@ class MobileHomeScreen extends Component {
             onSetOpen={this.onSetSidebarOpen}
             styles={{
               sidebar: {
-                background: "#0277BD",
+                background: "#096dd9",
                 width: 300
               },
               root: {
@@ -236,7 +237,8 @@ class MobileHomeScreen extends Component {
               <div className="modal">
                 <div className="actividadespublicadascopy78">
                   <form style={{ padding: "40px" }}>
-                    <div>Register Tree</div>
+                    <div className="registerTree">Register Tree</div>
+                    <div className="rectangle89" />
                     <Upload>
                       <Button style={{ margin: "20px 20px 20px 0" }}>
                         <Icon type="upload" /> Click to Upload
@@ -273,8 +275,12 @@ class MobileHomeScreen extends Component {
         </Router>
 
         <div className="rectangle2"></div>
-        <div className="welcomeBack">Welcome Back Jorge Abdo!</div>
-        <div className="treelers">Treelers</div>
+        <div className="welcomeBack">
+          <h1>Welcome Back Jorge Abdo!</h1>
+        </div>
+        <div className="treelers">
+          <p>Treelers</p>
+        </div>
         <div className="treelersNum">290</div>
       </div>
     );
