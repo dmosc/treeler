@@ -6,9 +6,15 @@ import './mobile.css';
 import IMG from "../img/daniel.jpg"
 import Popup from "reactjs-popup";
 import MAP from "../img/map.jpg"
-import HomeScreen from './web'
-import GoogleMapReact from 'google-map-react'
-import logo from '../img/2.png'
+import HomeScreen from './web';
+import GoogleMapReact from 'google-map-react';
+import { Button, Input, Upload, Icon, DatePicker } from 'antd';
+import logo from '../img/2.png';
+
+const { MonthPicker, RangePicker, WeekPicker } = DatePicker;
+function onChange(date, dateString) {
+    console.log(date, dateString);
+}
 
 class MobileHomeScreen extends Component {
     constructor() {
@@ -23,37 +29,34 @@ class MobileHomeScreen extends Component {
     handleChange = e => {
         this.setState({ [e.target.name]: e.target.value });
     }
+
+
     render() {
         return (
             <div>
-                <Popup trigger={<button className='notifyButton'>
-                    <div className='whiteNotify'>
-                        Register Tree
-            </div>
-                </button>} modal>
+                <Popup trigger={<Button type="primary">Register tree</Button>} modal>
                     {close => (
                         <div className="modal">
                             <div className="actividadespublicadascopy78">
-                                <div >
-                                    Register Tree
-            </div>
-                                <form>
-                                    <input type="file" placeholder="img "
-                                        value={this.state.img}
-                                        onChange={this.handleChange}
-                                        name="img" />
-                                    <input type="text" placeholder="Place "
-                                        value={this.state.place}
-                                        onChange={this.handleChange}
-                                        name="type" />
-                                    <input type="text" placeholder="Type"
-                                        value={this.state.type}
-                                        onChange={this.handleChange}
-                                        name="type" />
-                                    <input type="date" placeholder="Date "
-                                        value={this.state.date}
-                                        onChange={this.handleChange}
-                                        name="date" />
+                                <form style={{ padding: '40px' }}>
+                                    <div >
+                                        Register Tree
+                                    </div>
+                                    <Upload>
+                                        <Button style={{ margin: '20px 20px 20px 0' }}>
+                                            <Icon type="upload" /> Click to Upload
+                                        </Button>
+                                    </Upload>
+                                    <Input
+                                        style={{ marginBottom: '20px' }}
+                                        placeholder="Place" />
+                                    <Input
+                                        style={{ marginBottom: '20px' }}
+                                        placeholder="Type" />
+
+                                    <DatePicker
+                                        onChange={onChange} />
+
                                 </form>
                                 <div className="mRectangle20">
                                 </div>
