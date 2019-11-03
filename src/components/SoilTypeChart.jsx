@@ -18,12 +18,11 @@ class SoilTypeChart extends Component {
   render() {
     const {data} = this.props;
     return (
-      <BarChart width={350} height={300} padding={{top: 50}} data={data}>
+      <BarChart width={350} height={300} padding={{top: 100}} data={data}>
         <CartesianGrid strokeDasharray="10 10" />
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Legend margin={{top: 30}} />
         <Bar dataKey="probability" fill="#82ca9d" />
       </BarChart>
     );

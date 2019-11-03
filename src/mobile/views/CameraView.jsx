@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Camera from 'react-html5-camera-photo';
+import Camera, {FACING_MODES} from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 import ImagePreview from '../../components/ImagePreview';
 import {withApollo} from 'react-apollo';
@@ -31,10 +31,12 @@ const b64toBlob = (b64Data, contentType = '', sliceSize = 512) => {
 class CameraView extends Component {
   state = {
     results: null,
-    dataUri: null
+    dataUri: null,
+    loading: false
   };
 
   async onTakePhoto(dataUri) {
+    this.setState({loading: true});
     const [_, base64] = dataUri.split(',');
     const blob = b64toBlob(base64, 'image/png');
 
@@ -75,13 +77,17 @@ class CameraView extends Component {
   }
 
   render() {
-    const {results, dataUri} = this.state;
+    const {results, dataUri, loading} = this.state;
     return (
       <div className="App">
         {dataUri ? (
           <ImagePreview image={dataUri} />
+        ) : loading ? (
+          <div>Analysing...</div>
         ) : (
           <Camera
+            idealFacingMode={FACING_MODES.ENVIRONMENT}
+            isImageMirror={false}
             onTakePhotoAnimationDone={dataUri =>
               this.onTakePhotoAnimationDone(dataUri)
             }
